@@ -1,0 +1,696 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 5
+Title "MOSSbp Motherboard"
+Date ""
+Rev "0.1"
+Comp "Randipa Gunathilake"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Screw_Terminal_01x02 J201
+U 1 1 5DFD9A83
+P 1000 1600
+F 0 "J201" H 1000 1400 50  0000 C CNN
+F 1 "300V 20A" H 1000 1700 50  0000 C CNN
+F 2 "" H 1000 1600 50  0001 C CNN
+F 3 "~" H 1000 1600 50  0001 C CNN
+F 4 " 277-6405-ND" H 1000 1600 50  0001 C CNN "Digi-Key_PN"
+	1    1000 1600
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0202
+U 1 1 5DFE0831
+P 1500 1650
+F 0 "#PWR0202" H 1500 1400 50  0001 C CNN
+F 1 "GND" H 1505 1477 50  0000 C CNN
+F 2 "" H 1500 1650 50  0001 C CNN
+F 3 "" H 1500 1650 50  0001 C CNN
+	1    1500 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 1600 1500 1600
+Wire Wire Line
+	1500 1600 1500 1650
+Wire Wire Line
+	1200 1500 1750 1500
+$Comp
+L Device:Fuse F202
+U 1 1 5DFE17C4
+P 2050 1500
+F 0 "F202" V 1950 1500 50  0000 C CNN
+F 1 "32V 10A" V 2150 1500 50  0000 C CNN
+F 2 "" V 1980 1500 50  0001 C CNN
+F 3 "~" H 2050 1500 50  0001 C CNN
+F 4 " 507-1942-1-ND " H 2050 1500 50  0001 C CNN "Digi-Key_PN"
+	1    2050 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Fuse F201
+U 1 1 5DFE1EB3
+P 2050 1000
+F 0 "F201" V 1950 1000 50  0000 C CNN
+F 1 "32V 15A" V 2150 1000 50  0000 C CNN
+F 2 "" V 1980 1000 50  0001 C CNN
+F 3 "~" H 2050 1000 50  0001 C CNN
+F 4 "507-1944-1-ND " H 2050 1000 50  0001 C CNN "Digi-Key_PN"
+	1    2050 1000
+	0    1    1    0   
+$EndComp
+Connection ~ 1750 1500
+Wire Wire Line
+	1750 1500 1900 1500
+$Comp
+L Diode:1N4004 D202
+U 1 1 5DFE3A96
+P 2850 1500
+F 0 "D202" H 2850 1284 50  0000 C CNN
+F 1 "1N4004" H 2850 1375 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 2850 1325 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 2850 1500 50  0001 C CNN
+F 4 " S1M-FDICT-ND " H 2850 1500 50  0001 C CNN "Digi-Key_PN"
+	1    2850 1500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Diode:1N4004 D201
+U 1 1 5DFE475B
+P 2600 1700
+F 0 "D201" V 2554 1779 50  0000 L CNN
+F 1 "1N4004" V 2645 1779 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 2600 1525 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 2600 1700 50  0001 C CNN
+F 4 " S1M-FDICT-ND " H 2600 1700 50  0001 C CNN "Digi-Key_PN"
+	1    2600 1700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2200 1500 2600 1500
+$Comp
+L power:GND #PWR0204
+U 1 1 5DFE55B4
+P 2600 1950
+F 0 "#PWR0204" H 2600 1700 50  0001 C CNN
+F 1 "GND" H 2605 1777 50  0000 C CNN
+F 2 "" H 2600 1950 50  0001 C CNN
+F 3 "" H 2600 1950 50  0001 C CNN
+	1    2600 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 1950 2600 1850
+Wire Wire Line
+	2600 1550 2600 1500
+Connection ~ 2600 1500
+Wire Wire Line
+	2600 1500 2700 1500
+Text HLabel 2400 1000 2    50   Output ~ 0
+V_BED
+Wire Wire Line
+	3000 1500 3250 1500
+Text HLabel 3250 1500 2    50   Output ~ 0
+VCC
+Text HLabel 2600 1350 1    50   Output ~ 0
+24V
+Wire Wire Line
+	2600 1500 2600 1350
+Wire Wire Line
+	1750 1000 1900 1000
+Wire Wire Line
+	1750 1000 1750 1500
+Wire Wire Line
+	2200 1000 2400 1000
+Wire Notes Line
+	3550 800  3550 2250
+Wire Notes Line
+	3550 2250 700  2250
+Wire Notes Line
+	700  2250 700  800 
+Wire Notes Line
+	700  800  3550 800 
+Text Notes 1900 750  0    50   ~ 0
+Power In
+$Comp
+L rg_symbols:TPS54231 U201
+U 1 1 5E0026D0
+P 3500 3250
+F 0 "U201" H 3500 3717 50  0000 C CNN
+F 1 "TPS54231" H 3500 3626 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4350 2850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tps54233.pdf" H 3500 3200 50  0001 C CNN
+F 4 "296-23844-1-ND" H 3500 3250 50  0001 C CNN "Digi-Key_PN"
+	1    3500 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C202
+U 1 1 5E009754
+P 1300 3300
+F 0 "C202" H 1350 3400 50  0000 L CNN
+F 1 "10u" H 1350 3200 50  0000 L CNN
+F 2 "" H 1338 3150 50  0001 C CNN
+F 3 "~" H 1300 3300 50  0001 C CNN
+	1    1300 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R201
+U 1 1 5E00DFB4
+P 2000 3300
+F 0 "R201" H 2050 3400 50  0000 L CNN
+F 1 "332k" V 2000 3200 50  0000 L CNN
+F 2 "" V 1930 3300 50  0001 C CNN
+F 3 "~" H 2000 3300 50  0001 C CNN
+	1    2000 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R202
+U 1 1 5E00F797
+P 2000 3750
+F 0 "R202" H 2050 3750 50  0000 L CNN
+F 1 "68.1k" V 2000 3650 50  0000 L CNN
+F 2 "" V 1930 3750 50  0001 C CNN
+F 3 "~" H 2000 3750 50  0001 C CNN
+	1    2000 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 3150 1300 3050
+Wire Wire Line
+	1300 3050 1650 3050
+Wire Wire Line
+	1650 3150 1650 3050
+Connection ~ 1650 3050
+Wire Wire Line
+	1650 3050 2000 3050
+Wire Wire Line
+	2000 3150 2000 3050
+Connection ~ 2000 3050
+Wire Wire Line
+	2000 3600 2000 3500
+Wire Wire Line
+	1650 3550 1650 3450
+Wire Wire Line
+	1300 3450 1300 3550
+Connection ~ 1300 3550
+Wire Wire Line
+	1300 3550 1650 3550
+$Comp
+L power:GND #PWR0201
+U 1 1 5E014B84
+P 1300 3650
+F 0 "#PWR0201" H 1300 3400 50  0001 C CNN
+F 1 "GND" H 1305 3477 50  0000 C CNN
+F 2 "" H 1300 3650 50  0001 C CNN
+F 3 "" H 1300 3650 50  0001 C CNN
+	1    1300 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 3650 1300 3550
+Wire Wire Line
+	2000 3900 2000 4050
+$Comp
+L power:GND #PWR0203
+U 1 1 5E015A78
+P 2000 4050
+F 0 "#PWR0203" H 2000 3800 50  0001 C CNN
+F 1 "GND" H 2005 3877 50  0000 C CNN
+F 2 "" H 2000 4050 50  0001 C CNN
+F 3 "" H 2000 4050 50  0001 C CNN
+	1    2000 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 3500 2200 3500
+Wire Wire Line
+	2200 3500 2200 3250
+Connection ~ 2000 3500
+Wire Wire Line
+	2000 3500 2000 3450
+$Comp
+L Device:C C206
+U 1 1 5E01C0D6
+P 3000 3750
+F 0 "C206" H 3115 3796 50  0000 L CNN
+F 1 "0.015u" H 3115 3705 50  0000 L CNN
+F 2 "" H 3038 3600 50  0001 C CNN
+F 3 "~" H 3000 3750 50  0001 C CNN
+	1    3000 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 3600 3000 3450
+Wire Wire Line
+	3000 3450 3100 3450
+Wire Wire Line
+	3500 3650 3500 3950
+Wire Wire Line
+	3500 3950 3250 3950
+Wire Wire Line
+	3000 3950 3000 3900
+$Comp
+L power:GND #PWR0206
+U 1 1 5E01F2BF
+P 3250 4000
+F 0 "#PWR0206" H 3250 3750 50  0001 C CNN
+F 1 "GND" H 3255 3827 50  0000 C CNN
+F 2 "" H 3250 4000 50  0001 C CNN
+F 3 "" H 3250 4000 50  0001 C CNN
+	1    3250 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 4000 3250 3950
+Connection ~ 3250 3950
+Wire Wire Line
+	3250 3950 3000 3950
+$Comp
+L Device:C C207
+U 1 1 5E0260DF
+P 4150 3050
+F 0 "C207" V 3898 3050 50  0000 C CNN
+F 1 "0.1u" V 3989 3050 50  0000 C CNN
+F 2 "" H 4188 2900 50  0001 C CNN
+F 3 "~" H 4150 3050 50  0001 C CNN
+	1    4150 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C204
+U 1 1 5E031A76
+P 2400 3550
+F 0 "C204" H 2450 3650 50  0000 L CNN
+F 1 "1000p" H 2450 3450 50  0000 L CNN
+F 2 "" H 2438 3400 50  0001 C CNN
+F 3 "~" H 2400 3550 50  0001 C CNN
+	1    2400 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C205
+U 1 1 5E032A93
+P 2750 3550
+F 0 "C205" H 2800 3650 50  0000 L CNN
+F 1 "47p" H 2800 3450 50  0000 L CNN
+F 2 "" H 2788 3400 50  0001 C CNN
+F 3 "~" H 2750 3550 50  0001 C CNN
+	1    2750 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R203
+U 1 1 5E03307C
+P 2400 3950
+F 0 "R203" H 2450 3950 50  0000 L CNN
+F 1 "29.4k" V 2400 3850 50  0000 L CNN
+F 2 "" V 2330 3950 50  0001 C CNN
+F 3 "~" H 2400 3950 50  0001 C CNN
+	1    2400 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 3350 2750 3350
+Wire Wire Line
+	2400 3350 2400 3400
+Wire Wire Line
+	2750 3400 2750 3350
+Connection ~ 2750 3350
+Wire Wire Line
+	2750 3350 2400 3350
+Wire Wire Line
+	2400 3700 2400 3800
+Wire Wire Line
+	2400 4100 2400 4200
+Wire Wire Line
+	2400 4200 2600 4200
+Wire Wire Line
+	2750 4200 2750 3700
+$Comp
+L power:GND #PWR0205
+U 1 1 5E04502E
+P 2600 4250
+F 0 "#PWR0205" H 2600 4000 50  0001 C CNN
+F 1 "GND" H 2605 4077 50  0000 C CNN
+F 2 "" H 2600 4250 50  0001 C CNN
+F 3 "" H 2600 4250 50  0001 C CNN
+	1    2600 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 4250 2600 4200
+Connection ~ 2600 4200
+Wire Wire Line
+	2600 4200 2750 4200
+Wire Wire Line
+	2000 3050 3100 3050
+Wire Wire Line
+	2200 3250 3100 3250
+$Comp
+L dk_Diodes-Rectifiers-Single:B240A-13-F D203
+U 1 1 5E054D8F
+P 4450 3450
+F 0 "D203" V 4503 3347 60  0000 R CNN
+F 1 "B240A-13-F" V 4397 3347 60  0000 R CNN
+F 2 "digikey-footprints:DO-214AC" H 4650 3650 60  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds13004.pdf" H 4650 3750 60  0001 L CNN
+F 4 "B240A-FDICT-ND" H 4650 3850 60  0001 L CNN "Digi-Key_PN"
+F 5 "B240A-13-F" H 4650 3950 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 4650 4050 60  0001 L CNN "Category"
+F 7 "Diodes - Rectifiers - Single" H 4650 4150 60  0001 L CNN "Family"
+F 8 "https://www.diodes.com/assets/Datasheets/ds13004.pdf" H 4650 4250 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/diodes-incorporated/B240A-13-F/B240A-FDICT-ND/717810" H 4650 4350 60  0001 L CNN "DK_Detail_Page"
+F 10 "DIODE SCHOTTKY 40V 2A SMA" H 4650 4450 60  0001 L CNN "Description"
+F 11 "Diodes Incorporated" H 4650 4550 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 4650 4650 60  0001 L CNN "Status"
+	1    4450 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:L L201
+U 1 1 5E05D1A1
+P 4950 3250
+F 0 "L201" V 5140 3250 50  0000 C CNN
+F 1 "15u" V 5049 3250 50  0000 C CNN
+F 2 "" H 4950 3250 50  0001 C CNN
+F 3 "~" H 4950 3250 50  0001 C CNN
+F 4 "490-13203-1-ND" H 4950 3250 50  0001 C CNN "Digi-Key_PN"
+	1    4950 3250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C208
+U 1 1 5E05E518
+P 5300 3400
+F 0 "C208" H 5415 3446 50  0000 L CNN
+F 1 "47u" H 5415 3355 50  0000 L CNN
+F 2 "" H 5338 3250 50  0001 C CNN
+F 3 "~" H 5300 3400 50  0001 C CNN
+	1    5300 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C209
+U 1 1 5E0642A9
+P 5700 3400
+F 0 "C209" H 5815 3446 50  0000 L CNN
+F 1 "47u" H 5815 3355 50  0000 L CNN
+F 2 "" H 5738 3250 50  0001 C CNN
+F 3 "~" H 5700 3400 50  0001 C CNN
+	1    5700 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 3250 5300 3250
+Wire Wire Line
+	5700 3250 6200 3250
+Connection ~ 5700 3250
+Wire Wire Line
+	4000 3050 3900 3050
+Connection ~ 4450 3250
+Wire Wire Line
+	4450 3250 4800 3250
+Wire Wire Line
+	5300 3250 5100 3250
+Connection ~ 5300 3250
+$Comp
+L Device:R R204
+U 1 1 5E075CCA
+P 6200 3400
+F 0 "R204" H 6250 3400 50  0000 L CNN
+F 1 "10.1k" V 6200 3300 50  0000 L CNN
+F 2 "" V 6130 3400 50  0001 C CNN
+F 3 "~" H 6200 3400 50  0001 C CNN
+	1    6200 3400
+	1    0    0    -1  
+$EndComp
+Connection ~ 6200 3250
+$Comp
+L Device:R R205
+U 1 1 5E077038
+P 6200 3850
+F 0 "R205" H 6250 3850 50  0000 L CNN
+F 1 "1.87k" V 6200 3750 50  0000 L CNN
+F 2 "" V 6130 3850 50  0001 C CNN
+F 3 "~" H 6200 3850 50  0001 C CNN
+	1    6200 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 3700 6200 3650
+Wire Wire Line
+	4450 3650 4450 4150
+Wire Wire Line
+	4450 4150 5300 4150
+Wire Wire Line
+	6200 4150 6200 4000
+Wire Wire Line
+	5300 3550 5300 4150
+Connection ~ 5300 4150
+Wire Wire Line
+	5300 4150 5700 4150
+Wire Wire Line
+	5700 3550 5700 4150
+Connection ~ 5700 4150
+Wire Wire Line
+	5700 4150 6200 4150
+Wire Wire Line
+	4050 3650 4050 3450
+Wire Wire Line
+	4050 3450 3900 3450
+Connection ~ 6200 3650
+Wire Wire Line
+	6200 3650 6200 3550
+$Comp
+L power:GND #PWR0207
+U 1 1 5E081090
+P 5300 4200
+F 0 "#PWR0207" H 5300 3950 50  0001 C CNN
+F 1 "GND" H 5305 4027 50  0000 C CNN
+F 2 "" H 5300 4200 50  0001 C CNN
+F 3 "" H 5300 4200 50  0001 C CNN
+	1    5300 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 4200 5300 4150
+Text HLabel 7100 3100 1    50   Output ~ 0
+5V
+Wire Wire Line
+	3900 3250 4450 3250
+Wire Wire Line
+	4300 3050 4450 3050
+Wire Wire Line
+	4450 3050 4450 3250
+Text Notes 3500 2500 0    50   ~ 0
+5V Regulator
+Wire Wire Line
+	4050 3650 6200 3650
+$Comp
+L Device:C C210
+U 1 1 5E0D66D3
+P 6600 3650
+F 0 "C210" H 6550 3550 50  0000 R CNN
+F 1 "33u" H 6550 3750 50  0000 R CNN
+F 2 "" H 6638 3500 50  0001 C CNN
+F 3 "~" H 6600 3650 50  0001 C CNN
+	1    6600 3650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6600 3250 6600 3500
+Wire Wire Line
+	6200 3250 6600 3250
+Wire Wire Line
+	6600 3800 6600 4150
+Wire Wire Line
+	6600 4150 6200 4150
+Connection ~ 6200 4150
+Wire Wire Line
+	7100 3100 7100 3250
+Wire Notes Line
+	700  4500 700  2550
+Wire Wire Line
+	800  3050 800  2900
+Text HLabel 800  2900 1    50   Output ~ 0
+VCC
+Connection ~ 1300 3050
+Wire Wire Line
+	950  3550 1300 3550
+Wire Wire Line
+	950  3450 950  3550
+Wire Wire Line
+	950  3050 1300 3050
+Wire Wire Line
+	800  3050 950  3050
+Connection ~ 950  3050
+Wire Wire Line
+	950  3150 950  3050
+$Comp
+L Device:C C201
+U 1 1 5E008E9E
+P 950 3300
+F 0 "C201" H 1000 3400 50  0000 L CNN
+F 1 "100u" H 1000 3200 50  0000 L CNN
+F 2 "" H 988 3150 50  0001 C CNN
+F 3 "~" H 950 3300 50  0001 C CNN
+	1    950  3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C203
+U 1 1 5E009AB4
+P 1650 3300
+F 0 "C203" H 1700 3400 50  0000 L CNN
+F 1 "0.1u" H 1700 3200 50  0000 L CNN
+F 2 "" H 1688 3150 50  0001 C CNN
+F 3 "~" H 1650 3300 50  0001 C CNN
+	1    1650 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C211
+U 1 1 5E026369
+P 6950 3650
+F 0 "C211" H 6850 3550 50  0000 R CNN
+F 1 "1u" H 6850 3750 50  0000 R CNN
+F 2 "" H 6988 3500 50  0001 C CNN
+F 3 "~" H 6950 3650 50  0001 C CNN
+	1    6950 3650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6600 3250 6950 3250
+Connection ~ 6600 3250
+Wire Wire Line
+	6950 3800 6950 4150
+Wire Wire Line
+	6950 4150 6600 4150
+Connection ~ 6600 4150
+Wire Wire Line
+	6950 3500 6950 3250
+Wire Wire Line
+	7100 3250 6950 3250
+Connection ~ 6950 3250
+Wire Notes Line
+	7300 2550 7300 4500
+Wire Notes Line
+	700  2550 7300 2550
+Wire Notes Line
+	700  4500 7300 4500
+$Comp
+L Device:C C?
+U 1 1 5E051FBC
+P 1300 5800
+F 0 "C?" H 1350 5900 50  0000 L CNN
+F 1 "0.1u" H 1350 5700 50  0000 L CNN
+F 2 "" H 1338 5650 50  0001 C CNN
+F 3 "~" H 1300 5800 50  0001 C CNN
+	1    1300 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E05252A
+P 1000 5800
+F 0 "C?" H 1050 5900 50  0000 L CNN
+F 1 "1u" H 1050 5700 50  0000 L CNN
+F 2 "" H 1038 5650 50  0001 C CNN
+F 3 "~" H 1000 5800 50  0001 C CNN
+	1    1000 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E052B65
+P 2400 5800
+F 0 "C?" H 2450 5900 50  0000 L CNN
+F 1 "1u" H 2450 5700 50  0000 L CNN
+F 2 "" H 2438 5650 50  0001 C CNN
+F 3 "~" H 2400 5800 50  0001 C CNN
+	1    2400 5800
+	1    0    0    -1  
+$EndComp
+Text HLabel 800  5550 1    50   Output ~ 0
+5V
+Wire Wire Line
+	800  5650 800  5550
+Wire Wire Line
+	800  5650 1000 5650
+Connection ~ 1000 5650
+Wire Wire Line
+	1000 5650 1300 5650
+Connection ~ 1300 5650
+Wire Wire Line
+	1300 5650 1600 5650
+Wire Wire Line
+	1900 5950 1900 6050
+Wire Wire Line
+	1900 6050 1300 6050
+Wire Wire Line
+	1000 6050 1000 5950
+Wire Wire Line
+	1300 5950 1300 6050
+Connection ~ 1300 6050
+Wire Wire Line
+	1300 6050 1000 6050
+$Comp
+L power:GND #PWR?
+U 1 1 5E06247A
+P 1900 6100
+F 0 "#PWR?" H 1900 5850 50  0001 C CNN
+F 1 "GND" H 1905 5927 50  0000 C CNN
+F 2 "" H 1900 6100 50  0001 C CNN
+F 3 "" H 1900 6100 50  0001 C CNN
+	1    1900 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 6100 1900 6050
+Connection ~ 1900 6050
+Wire Wire Line
+	2200 5650 2400 5650
+Wire Wire Line
+	2400 5950 2400 6050
+Wire Wire Line
+	2400 6050 1900 6050
+Wire Wire Line
+	2400 5650 2700 5650
+Wire Wire Line
+	2700 5650 2700 5550
+Connection ~ 2400 5650
+Text HLabel 2700 5550 1    50   Output ~ 0
+DC3.3V
+$Comp
+L rg_symbols:TLV1117LV-33 U?
+U 1 1 5E09F3A1
+P 1900 5650
+F 0 "U?" H 1900 5892 50  0000 C CNN
+F 1 "TLV1117LV-33" H 1900 5801 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 2800 5400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tlv1117lv.pdf" H 1900 5650 50  0001 C CNN
+F 4 "296-28778-1-ND" H 1900 5650 50  0001 C CNN "Digi-Key_PN"
+	1    1900 5650
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	2800 6350 700  6350
+Wire Notes Line
+	700  6350 700  5150
+Wire Notes Line
+	700  5150 2800 5150
+Wire Notes Line
+	2800 5150 2800 6350
+Text Notes 1450 5100 0    50   ~ 0
+3.3V Regulator\n
+$EndSCHEMATC
